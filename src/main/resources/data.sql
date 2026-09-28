@@ -1,4 +1,4 @@
-INSERT INTO member (id,name) VALUES (1,'홍길동');
-INSERT INTO member (id,name) VALUES (2,'고길동');
-INSERT INTO member (id,name) VALUES (3,'김길동');
+INSERT INTO member (name,email) VALUES ('홍길동','gildong1@gmail.com');
+INSERT INTO member (name,email) VALUES ('고길동','gildong2@gmail.com');
+INSERT INTO member (name,email) VALUES ('김길동','gildong3@gmail.com');
 

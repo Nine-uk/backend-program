@@ -1,0 +1,4 @@
+spring:
+  sql:
+    init:
+      mode: never # src/main/resources 폴더 아래의 data.sql 실행되지 않도록 함.

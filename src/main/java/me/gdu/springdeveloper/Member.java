@@ -7,7 +7,6 @@ import lombok.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Setter
 @Getter
 @Entity
 public class Member {
@@ -17,13 +16,10 @@ public class Member {
     private Long id;
 
     @Column(name="name", nullable = false)
+    @Setter(AccessLevel.PUBLIC)
     private String name;
 
-    @Column(name="email", nullable = false)
-    private String email;
-
-    public Member(String name,String email){
+    public Member(String name){
         this.name = name;
-        this.email = email;
     }
 }

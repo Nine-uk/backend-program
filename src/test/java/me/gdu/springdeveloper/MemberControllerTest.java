@@ -30,7 +30,7 @@ class MemberControllerTest {
         // 준비 (Given)
         // 한 명의 회원을 DB테이블에 저장함으로써 등록
         final String url = "/member";
-        Member savedMember = memberRepository.save(new Member("박성철","sung@gmail.com"));
+        Member savedMember = memberRepository.save(new Member(1L,"박성철"));
 
         // 실행 (When)
         // 회원 리스트 요청

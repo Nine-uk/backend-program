@@ -20,6 +20,8 @@ repositories {
 
 
 dependencies {
+    // Thymeleaf 의존성추가
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher' // test 빌드과정 오류해결

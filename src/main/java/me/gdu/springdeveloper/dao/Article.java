@@ -24,4 +24,9 @@ public class Article {
         this.content = content;
         // 이걸로 객체생성을 Ariticle.builder().title("A").content("B"); 로 생성가능
     }
+
+    public void update(String title,String content){
+        this.title = title;
+        this.content = content;
+    }
 }

@@ -15,8 +15,10 @@
         <p th:text="${person.age}">나이</p>
         <p>취미</p>
         <ul>
-            <li>운동</li>
-            <span>(대표 취미)</span>
+            <li th:each="hobby:${person.hobbies}"
+                th:text="${hobby}">운동
+                <span th:if="${hobby=='운동'}">(대표 취미)</span>
+            </li>
         </ul>
     </div>
     <a href="">글보기</a>

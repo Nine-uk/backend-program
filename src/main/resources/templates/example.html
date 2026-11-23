@@ -9,19 +9,31 @@
 </head>
 <body>
     <h1>타임리프 익히기</h1>
-    <p></p>
-    <div>
-        <p th:text="${person.name}">이름</p>
-        <p th:text="${person.age}">나이</p>
+    <p th:text="${#temporals.format(today, 'yyyy-MM-dd')}"></p>
+<!--    <div>-->
+<!--        <p th:text="${person.name}">이름</p>-->
+<!--        <p th:text="${person.age}">나이</p>-->
+<!--        <p>취미</p>-->
+<!--        <ul>-->
+<!--            <li th:each="hobby:${person.hobbies}">-->
+<!--                <span th:text="${hobby}">운동</span>-->
+<!--                <span th:if="${hobby=='운동'}">(대표 취미)</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+    <div th:object="${person}">
+        <p th:text="*{name}">이름</p>
+        <p th:text="*{age}">나이</p>
         <p>취미</p>
         <ul>
-            <li th:each="hobby:${person.hobbies}"
-                th:text="${hobby}">운동
+            <li th:each="hobby:*{hobbies}">
+                <span th:text="${hobby}">운동</span>
                 <span th:if="${hobby=='운동'}">(대표 취미)</span>
             </li>
         </ul>
     </div>
-    <a href="">글보기</a>
-
+<!--    <a href="/api/articles">글보기</a>-->
+    <a th:href="@{/api/article/{id}(id=${person.blogId})}">글보기</a>
 </body>
 </html>
